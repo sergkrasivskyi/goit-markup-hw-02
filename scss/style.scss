@@ -1,0 +1,289 @@
+// * підготовчий стиль
+html {
+    height: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+ul,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+// * закінчуємо стиль обнулення
+
+
+// * визначаємо змінні start
+// todo «C6» Для зберігання палітри кольорів макета (текст, фон, виділення) використовуються CSS-змінні.
+:root {
+    --txtcolor: #757575;
+    /*колір тексту*/
+    --color-hover: #2196F3;
+    /*колір тексту при hover */
+    --headers-color: #212121;
+    --menu-link-color: #212121;
+    /*колір тексту заголовків */
+    --btn-bckgrd: #2196F3;
+    --btn-bckgrd-hover: #188CE8;
+    --body-bckgrd-color: #E5E5E5;
+    --page-bckgrd-color: #FFFFFF;
+    --hero-bckgrd: #2F303A;
+    --fz-colutions-title: 44px;
+    --fz-section-title: 36px;
+    --fz-company-name: 26px;
+    --fz-order-btn: 16px;
+    --fz-menu-info-link-txt: 14px;
+}
+
+// * змінні -end
+body {
+    max-width: 1600px;
+    height: 96%;
+    font-family: 'Roboto', sans-serif;
+    padding: 30px;
+    background-color: var(--body-bckgrd-color);
+}
+
+.wrapper {
+    min-height: 100%;
+    background-color: var(--page-bckgrd-color);
+    display: flex;
+    flex-direction: column;
+}
+
+// * header - start
+.header {
+    flex: 0 0 80px;
+
+    padding: 0 13.5%;
+    border-bottom: #ECECEC;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+
+}
+
+.company-link {
+    margin-top: 24px;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: var(--fz-company-name);
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    color: var(--menu-link-color);
+
+    >span {
+        color: #2196F3;
+    }
+}
+
+.header__menu {
+    // for grid position
+    margin-top: 32px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+    & .menu__link {
+        font-style: normal;
+        font-weight: 500;
+        font-size: var(--fz-menu-info-link-txt);
+        line-height: 16px;
+        letter-spacing: 0.02em;
+
+        color: var(--menu-color);
+    }
+
+    & .menu__link:hover {
+        color: var(--color-hover);
+    }
+
+    >ul {
+        text-align: justify;
+    }
+}
+
+.header-info {
+    // for grid position
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: minmax(135px, 1fr) minmax(122px, 1fr);
+    // grid-auto-columns: minmax(135px, 0.5fr) minmax(122px, 0.5fr);
+    // column-gap: auto;
+}
+
+.contact-info {
+    & .info__link {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: var(--fz-menu-info-link-txt);
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        color: var(--txtcolor);
+    }
+
+    .info__link:hover {
+        color: var(--color-hover);
+    }
+
+    >li {
+        text-align: right;
+
+    }
+}
+
+//* header - end
+
+// *main start
+.main {
+
+    flex: 1 1 auto;
+    // даємо можливість елементу main зайняти
+    //  усе місце між headerта footer
+
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 94px;
+    // grid-template:
+    // [start]"effective-solutions "[row2]      
+    // [row2] "advantages" 10% [row3]
+    // [row3] "what-we-doing" 80% [row4]
+    // [row4] "our-team" 10% [row-end] / 1fr 4fr;
+}
+
+.effective-solutions {
+    background-color: var(--hero-bckgrd);
+    text-align: center;
+
+    h1 {
+        font-weight: 900;
+        font-size: var(--fz-colutions-title);
+        line-height: 136%;
+        margin-top: 200px;
+
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+
+    .order-service-btn {
+        font-family: 'Roboto';
+        font-weight: 700;
+        font-size: var(--fz-order-btn);
+        // font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.06em;
+        margin-top: 30px;
+        margin-bottom: 200px;
+        padding: 10px 32px;
+        // align
+
+        color: #FFFFFF;
+
+        background-color: var(--btn-bckgrd);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+    }
+
+    .order-service-btn:hover {
+
+        background-color: var(--btn-bckgrd-hover);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+    }
+
+    .order-service-btn:focus {
+        background-color: var(--btn-bckgrd-hover);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+    }
+}
+
+.our-advantages {
+    padding: 0 13.5%;
+
+    .hidden-title {
+        display: none;
+    }
+
+    .advantages__list {
+        // padding: 0 215px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 30px;
+
+        .advantage-title {
+            font-weight: 700;
+            font-size: var(--fz-menu-info-link-txt);
+            line-height: 16px;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+
+            color: var(--headers-color);
+        }
+
+        .advantage-description {
+            margin-top: 10px;
+            font-weight: 400;
+            font-size: var(--fz-menu-info-link-txt);
+            line-height: 24px;
+            /* or 171% */
+
+            letter-spacing: 0.03em;
+            text-align: justify;
+
+            color: var(--txtcolor);
+        }
+
+    }
+}
+
+.what-we-doing {
+    padding: 0 13.4%;
+
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 50px;
+
+    .we-doing-title {
+        text-align: center;
+        font-weight: 700;
+        font-size: var(--fz-section-title);
+        line-height: 42px;
+        letter-spacing: 0.03em;
+        color: var(--menu-link-color);
+    }
+
+    .we-doing-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 30px;
+
+        img {
+            max-width: 99%;
+            min-width: 50%;
+        }
+
+    }
+}
+//* main end
+//* footer start
+.footer {
+    // flex-shrink: 0;
+}
+
+//*footer end
