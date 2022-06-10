@@ -59,7 +59,7 @@ button {
 body {
     max-width: 1600px;
     font-family: 'Roboto', sans-serif;
-    padding: 30px;
+    // padding: 30px;
     color:  #757575;
     background-color: var(--body-bckgrd-color);
 }
@@ -75,7 +75,7 @@ body {
 .header {
     flex: 0 0 80px;
 
-    padding: 0 13.5%;
+    padding: 0 13.43%;
     border-bottom: 1px solid #ECECEC;
 
     display: grid;
@@ -186,7 +186,7 @@ body {
         font-weight: var(--fw-section-title);
         font-size: var(--fz-btn);
         // font-size: 16px;
-        line-height: 30px;
+        line-height: 188%;
         letter-spacing: 0.06em;
         margin-top: 30px;
         margin-bottom: 200px;
@@ -242,7 +242,7 @@ body {
             margin-top: 10px;
             font-weight: 400;
             font-size: var(--fz-menu-info-link-txt);
-            line-height: 24px;
+            line-height: 171%;
             /* or 171% */
 
             letter-spacing: 0.03em;
@@ -255,7 +255,7 @@ body {
 }
 
 .what-we-doing {
-    padding: 0 13.4%;
+    padding: 0 13.43%;
 
     display: grid;
     grid-template-rows: auto auto;
@@ -284,7 +284,7 @@ body {
 }
 
 .our-team {
-    padding: 0 13.4%;
+    padding: 0 13.43%;
     display: grid;
     grid-template-rows: auto auto;
     row-gap: 50px;
@@ -353,7 +353,7 @@ body {
 
 //* footer start
 .footer {
-    padding: 0 13.4%;
+    padding: 0 13.43%;
     background: #2F303A;
 
     .company-link {
@@ -382,7 +382,7 @@ body {
             font-style: normal;
             font-weight: 400;
             font-size: var(--fz-menu-info-link-txt);
-            line-height: 24px;
+            line-height: 171%;
             letter-spacing: 0.03em;
 
             color: #FFFFFF;
@@ -392,7 +392,7 @@ body {
             font-style: normal;
             font-weight: 400;
             font-size: var(--fz-menu-info-link-txt);
-            line-height: 24px;
+            line-height: 171%;
             /* or 171% */
 
             letter-spacing: 0.03em;
@@ -409,7 +409,7 @@ body {
 .portpholiio-grid {
     // max-height: 100%;
     margin-top: 94px;
-    padding: 0 13.4%px;
+    padding: 0 13.43%;
     display: grid;
     grid-template-rows: auto, auto;
     row-gap: 50px;
@@ -431,7 +431,7 @@ body {
 
     font-weight: var(--fw-link-btn);
     font-size: var(--fz-btn);
-    line-height: 26px;
+    line-height: 162%;
     text-align: center;
     letter-spacing: 0.03em;
 
@@ -455,9 +455,10 @@ body {
 
 .project-list {
     display: grid;
-    padding: 0 13.4%;
-    grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+    // padding: 0 13.43%;
+    grid-template: repeat(3, minmax(auto, 404px))/repeat(3, 1fr);
     gap: 30px;
+    margin-bottom: 94px;
 
     >li {
         border: 1px solid #EEEEEE;
@@ -473,7 +474,7 @@ body {
 .project-title {
     font-weight: var(--fw-section-title);
     font-size: 18px;
-    line-height: 36px;
+    line-height: 200%; //200%
     letter-spacing: 0.06em;
     margin: 0 24px 4px;
 
@@ -485,7 +486,7 @@ body {
     margin: 0 24px 20px;
     font-weight: 400;
     font-size: var(--fz-team-person);
-    line-height: 30px;
+    line-height: 188%;
     /* identical to box height, or 188% */
 
     letter-spacing: 0.03em;
