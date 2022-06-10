@@ -34,8 +34,15 @@ button {
 // todo «C6» Для зберігання палітри кольорів макета (текст, фон, виділення) використовуються CSS-змінні.
 :root {
     --txt-color: #757575;
+    --main-title-color: #FFFFFF;
+    --section-bckgrd-color: #F5F4FA;
+    --btn-bckgrd-color: #F5F4FA;
     /*колір тексту*/
+    --logo-color: #2196F3;
     --color-hover: #2196F3;
+    --hover-txt-btn: #FFFFFF;
+    --brdr-prj-color: #EEEEEE;
+    --brdr-header-color: #ECECEC;
     /*колір тексту при hover */
     --headers-color: #212121;
     --menu-link-color: #212121;
@@ -60,7 +67,7 @@ body {
     max-width: 1600px;
     font-family: 'Roboto', sans-serif;
     // padding: 30px;
-    color:  #757575;
+    color: var(--txt-color);
     background-color: var(--body-bckgrd-color);
 }
 
@@ -76,7 +83,7 @@ body {
     flex: 0 0 80px;
 
     padding: 0 13.43%;
-    border-bottom: 1px solid #ECECEC;
+    border-bottom: 1px solid var(--brdr-header-color);
 
     display: grid;
     grid-template-columns: 1fr 2fr 2fr;
@@ -86,12 +93,12 @@ body {
         font-family: 'Raleway', sans-serif;
         font-weight: var(--fw-section-title);
         font-size: var(--fz-company-name);
-        line-height: 31px;
+        line-height: 1.19; // 31px;
         letter-spacing: 0.03em;
         color: var(--menu-link-color);
 
         >span {
-            color: #2196F3;
+            color: var(--logo-color);
         }
     }
 
@@ -104,13 +111,13 @@ body {
         display: grid;
         grid-template-columns: auto auto auto;
         color: var(--menu-link-color);
-       
+
 
         &__link {
             font-style: normal;
             font-weight: var(--fw-link-btn);
             font-size: var(--fz-menu-info-link-txt);
-            line-height: 16px;
+            line-height: 1.143; // 16px;
             letter-spacing: 0.02em;
 
             color: var(--menu-color);
@@ -135,7 +142,7 @@ body {
         .info__link {
             font-weight: var(--fw-link-btn);
             font-size: var(--fz-menu-info-link-txt);
-            line-height: 16px;
+            line-height: 1.143; // 16px;
             letter-spacing: 0.02em;
             color: var(--txt-color);
         }
@@ -174,12 +181,12 @@ body {
     h1 {
         font-weight: 900;
         font-size: var(--fz-colutions-title);
-        line-height: 136%;
+        line-height: 1.36; //136%
         margin-top: 200px;
 
         letter-spacing: 0.06em;
         text-transform: uppercase;
-        color: #FFFFFF;
+        color: var(--main-title-color);
     }
 
     .order-service-btn {
@@ -187,14 +194,14 @@ body {
         font-weight: var(--fw-section-title);
         font-size: var(--fz-btn);
         // font-size: 16px;
-        line-height: 188%;
+        line-height: 1.88; //188%
         letter-spacing: 0.06em;
         margin-top: 30px;
         margin-bottom: 200px;
         padding: 10px 32px;
         // align
 
-        color: #FFFFFF;
+        color: var(--hover-txt-btn);
 
         background-color: var(--btn-bckgrd);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -216,12 +223,25 @@ body {
     }
 }
 
-.our-advantages {
-    padding: 0 13.5%;
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
 
-    .hidden-title {
-        display: none;
-    }
+.our-advantages {
+    padding: 0 13.43%;
+
+
+
+
 
     .advantages__list {
         // padding: 0 215px;
@@ -232,7 +252,7 @@ body {
         .advantage-title {
             font-weight: var(--fw-section-title);
             font-size: var(--fz-menu-info-link-txt);
-            line-height: 16px;
+            line-height: 1.143; //16px;
             letter-spacing: 0.03em;
             text-transform: uppercase;
 
@@ -241,9 +261,9 @@ body {
 
         .advantage-description {
             margin-top: 10px;
-            font-weight: 400;
+            //! font-weight: 400;
             font-size: var(--fz-menu-info-link-txt);
-            line-height: 171%;
+            line-height: 1.71; // 171%;
             /* or 171% */
 
             letter-spacing: 0.03em;
@@ -266,7 +286,7 @@ body {
         text-align: center;
         font-weight: var(--fw-section-title);
         font-size: var(--fz-section-title);
-        line-height: 42px;
+        line-height: 1.167; //42px;
         letter-spacing: 0.03em;
         color: var(--menu-link-color);
     }
@@ -289,13 +309,13 @@ body {
     display: grid;
     grid-template-rows: auto auto;
     row-gap: 50px;
-    background: #F5F4FA;
+    background: var(--section-bckgrd-color);
 
     &__title {
         margin-top: 94px;
         font-weight: var(--fw-section-title);
         font-size: var(--fz-section-title);
-        line-height: 42px;
+        line-height: 1.167; // 42px;
         text-align: center;
         letter-spacing: 0.03em;
         color: var(--headers-color);
@@ -312,7 +332,7 @@ body {
 
 .person {
     >li {
-        background: #FFFFFF;
+        background: var(--wrapper-bckgrd-color);
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 0px 0px 4px 4px;
     }
@@ -328,7 +348,7 @@ body {
         text-align: center;
         font-weight: var(--fw-link-btn);
         font-size: var(--fz-team-person);
-        line-height: 19px;
+        line-height: 1.188; //19px;
 
         text-align: center;
         letter-spacing: 0.03em;
@@ -340,9 +360,9 @@ body {
     &__job {
         margin-bottom: 30px;
         text-align: center;
-        font-weight: 400;
+        // ! font-weight: 400;
         font-size: var(--fz-team-person);
-        line-height: 19px;
+        line-height: 1.188; //19px;
         text-align: center;
         letter-spacing: 0.03em;
 
@@ -363,12 +383,12 @@ body {
         font-family: 'Raleway', sans-serif;
         font-weight: var(--fw-section-title);
         font-size: var(--fz-company-name);
-        line-height: 31px;
+        line-height: 1.192; //31px;
         letter-spacing: 0.03em;
-        color: #FFFFFF;
+        color: var(--main-title-color);
 
         >span {
-            color: #2196F3;
+            color: var(--logo-color);
         }
     }
 
@@ -381,19 +401,19 @@ body {
 
         &__office {
             font-style: normal;
-            font-weight: 400;
+            // ! font-weight: 400;
             font-size: var(--fz-menu-info-link-txt);
-            line-height: 171%;
+            line-height: 1.71; // 171%;
             letter-spacing: 0.03em;
 
-            color: #FFFFFF;
+            color: var(--main-title-color);
         }
 
         &__link {
             font-style: normal;
-            font-weight: 400;
+            // ! font-weight: 400;
             font-size: var(--fz-menu-info-link-txt);
-            line-height: 171%;
+            line-height: 1.71; // 171%;
             /* or 171% */
 
             letter-spacing: 0.03em;
@@ -407,7 +427,7 @@ body {
 //*footer end
 
 // todo portpholio style starts
-.portpholiio-grid {
+.portpholio-grid {
     // max-height: 100%;
     margin-top: 94px;
     padding: 0 13.43%;
@@ -416,7 +436,6 @@ body {
     row-gap: 50px;
 }
 
-.menu-portpholio {}
 
 .portpholio-buttons {
     display: flex;
@@ -426,13 +445,13 @@ body {
 
 .portpholio-btn {
     padding: 6px 22px;
-    background: #F5F4FA;
+    background: --btn;
     border: none;
     border-radius: 4px;
 
     font-weight: var(--fw-link-btn);
     font-size: var(--fz-btn);
-    line-height: 162%;
+    line-height: 1.62; //162%;
     text-align: center;
     letter-spacing: 0.03em;
 
@@ -441,15 +460,15 @@ body {
 }
 
 .portpholio-btn:hover {
-    color: #FFFFFF;
-    background: #2196F3;
+    color: var(--hover-txt-btn);
+    background: var(--color-hover);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
 }
 
 .portpholio-btn:focus {
-    color: #FFFFFF;
-    background: #2196F3;
+    color: var(--hover-txt-btn);
+    background: var(--color-hover);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
 }
@@ -462,7 +481,7 @@ body {
     margin-bottom: 94px;
 
     >li {
-        border: 1px solid #EEEEEE;
+        border: 1px solid var(--brdr-prj-color);
     }
 }
 
@@ -475,7 +494,7 @@ body {
 .project-title {
     font-weight: var(--fw-section-title);
     font-size: 18px;
-    line-height: 200%; //200%
+    line-height: 2; //200%
     letter-spacing: 0.06em;
     margin: 0 24px 4px;
 
@@ -485,9 +504,9 @@ body {
 
 .project-type {
     margin: 0 24px 20px;
-    font-weight: 400;
+    // ! font-weight: 400;
     font-size: var(--fz-team-person);
-    line-height: 188%;
+    line-height: 1.88; // 188%;
     /* identical to box height, or 188% */
 
     letter-spacing: 0.03em;
