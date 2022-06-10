@@ -165,6 +165,7 @@ body {
   color: #FFFFFF;
 }
 .effective-solutions .order-service-btn {
+  cursor: pointer;
   font-weight: var(--fw-section-title);
   font-size: var(--fz-btn);
   line-height: 188%;
