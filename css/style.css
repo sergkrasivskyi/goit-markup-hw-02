@@ -58,7 +58,6 @@ body {
 }
 
 .wrapper {
-  height: 100%;
   background-color: var(--wrapper-bckgrd-color);
   display: -webkit-box;
   display: -ms-flexbox;
