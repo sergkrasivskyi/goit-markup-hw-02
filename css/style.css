@@ -106,7 +106,6 @@ body {
   display: grid;
   -ms-grid-columns: auto auto auto;
   grid-template-columns: auto auto auto;
-  color: var(--menu-link-color);
 }
 .header .menu__link {
   font-weight: var(--fw-link-btn);
