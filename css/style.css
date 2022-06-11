@@ -109,12 +109,10 @@ body {
   color: var(--menu-link-color);
 }
 .header .menu__link {
-  font-style: normal;
   font-weight: var(--fw-link-btn);
   font-size: var(--fz-menu-info-link-txt);
   line-height: 1.143;
   letter-spacing: 0.02em;
-  color: var(--menu-color);
 }
 .header .menu__link:hover {
   color: var(--color-hover);
