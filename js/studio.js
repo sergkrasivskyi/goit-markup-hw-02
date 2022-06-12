@@ -1,9 +1,10 @@
 let COLOR_CURRENT = "#2196F3";
-if (window.location.pathname == "/index.html") {
+let urlToСompare = window.location.pathname.toString();
+if (urlToСompare.includes("index.html")) {
   const currentStudio = document.querySelector(".current-studio");
   currentStudio.style.color = COLOR_CURRENT;
 }
-if (window.location.pathname == "/portpholio.html") {
+if (urlToСompare.includes("portpholio.html")) {
   const currentPortpholio = document.querySelector(".current-portpholio");
   currentPortpholio.style.color = COLOR_CURRENT;
 }
