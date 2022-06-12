@@ -8,3 +8,4 @@ if (urlToСompare.includes("portpholio.html")) {
   const currentPortpholio = document.querySelector(".current-portpholio");
   currentPortpholio.style.color = COLOR_CURRENT;
 }
+
